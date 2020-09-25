@@ -1,0 +1,16 @@
+2020-09-24 18:26:13 DEBUG Config - Config.get(helper, instrument) = true
+2020-09-24 18:26:13 DEBUG Config - Config.get(helper, seed) = 0
+2020-09-24 18:26:13 DEBUG Config - Config.get(instrumenting, copies) = true
+2020-09-24 18:26:13 DEBUG Config - Config.get(instrumenting, swaps) = true
+2020-09-24 18:26:13 DEBUG Config - Config.get(instrumenting, compares) = true
+2020-09-24 18:26:13 DEBUG Config - Config.get(instrumenting, inversions) = 1
+2020-09-24 18:26:13 DEBUG Config - Config.get(instrumenting, fixes) = true
+2020-09-24 18:26:13 DEBUG Config - Config.get(helper, cutoff) = 
+2020-09-25 11:20:58 DEBUG Config - Config.get(helper, instrument) = true
+2020-09-25 11:20:58 DEBUG Config - Config.get(helper, seed) = 0
+2020-09-25 11:20:58 DEBUG Config - Config.get(instrumenting, copies) = true
+2020-09-25 11:20:58 DEBUG Config - Config.get(instrumenting, swaps) = true
+2020-09-25 11:20:58 DEBUG Config - Config.get(instrumenting, compares) = true
+2020-09-25 11:20:58 DEBUG Config - Config.get(instrumenting, inversions) = 1
+2020-09-25 11:20:58 DEBUG Config - Config.get(instrumenting, fixes) = true
+2020-09-25 11:20:58 DEBUG Config - Config.get(helper, cutoff) = 
