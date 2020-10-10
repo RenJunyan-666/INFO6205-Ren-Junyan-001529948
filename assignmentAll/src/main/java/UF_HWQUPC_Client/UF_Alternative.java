@@ -98,59 +98,65 @@ public class UF_Alternative {
     }
 
     public static void main(String[] args) {
-        //input size of sites
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Please input the size of sites:");
-        int n = sc.nextInt();
-        int mWQU = 0, mCQU = 0, mCWQU = 0;
-        Random random = new Random();
+        int test = 0;//the number of testing
 
-        //weighted-QU
-        UF_Alternative client1 = new UF_Alternative(n);
         do{
-            //generate random pairs
-            int m1 = random.nextInt(n);
-            int m2 = random.nextInt(n);
+            //input size of sites
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Please input the size of sites:");
+            int n = sc.nextInt();
+            int mWQU = 0, mCQU = 0, mCWQU = 0;
+            Random random = new Random();
+            System.out.println();
 
-            //connect random pairs
-            client1.weighted_QU(m1,m2);
-            mWQU++;
+            //weighted-QU
+            UF_Alternative client1 = new UF_Alternative(n);
+            do{
+                //generate random pairs
+                int m1 = random.nextInt(n);
+                int m2 = random.nextInt(n);
 
-        }while (client1.count>1);
+                //connect random pairs
+                client1.weighted_QU(m1,m2);
+                mWQU++;
 
-        System.out.println("weighted-QU's pairs generated is: "+mWQU);
-        System.out.println();
+            }while (client1.count>1);
+
+            System.out.println("weighted-QU's pairs generated is: "+mWQU);
 
 
-        //compression-path-QU
-        UF_Alternative client2 = new UF_Alternative(n);
-        do{
-            //generate random pairs
-            int m1 = random.nextInt(n);
-            int m2 = random.nextInt(n);
+            //compression-path-QU
+            UF_Alternative client2 = new UF_Alternative(n);
+            do{
+                //generate random pairs
+                int m1 = random.nextInt(n);
+                int m2 = random.nextInt(n);
 
-            //connect random pairs
-            client2.union(m1,m2);
-            mCQU++;
-        }while (client2.count>1);
+                //connect random pairs
+                client2.union(m1,m2);
+                mCQU++;
+            }while (client2.count>1);
 
-        System.out.println("compression-path-QU's pairs generated is: "+mCQU);
-        System.out.println();
+            System.out.println("compression-path-QU's pairs generated is: "+mCQU);
 
-        //weighted-compression-path-QU
-        UF_Alternative client3 = new UF_Alternative(n);
-        do{
-            //generate random pairs
-            int m1 = random.nextInt(n);
-            int m2 = random.nextInt(n);
+            //weighted-compression-path-QU
+            UF_Alternative client3 = new UF_Alternative(n);
+            do{
+                //generate random pairs
+                int m1 = random.nextInt(n);
+                int m2 = random.nextInt(n);
 
-            //connect random pairs
-            client3.weighted_compression_QU(m1,m2);
-            mCWQU++;
-        }while (client3.count>1);
+                //connect random pairs
+                client3.weighted_compression_QU(m1,m2);
+                mCWQU++;
+            }while (client3.count>1);
 
-        System.out.println("weighted-compression-path-QU's pairs generated is: "+mCWQU);
-        System.out.println();
+            System.out.println("weighted-compression-path-QU's pairs generated is: "+mCWQU);
+            System.out.println();
+
+            test++;
+        }while(test<5);
+
     }
 
 }
