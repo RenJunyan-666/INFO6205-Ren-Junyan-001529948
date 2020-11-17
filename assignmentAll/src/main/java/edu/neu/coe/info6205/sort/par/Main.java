@@ -21,7 +21,7 @@ public class Main {
         int size = 1000000;
         while(testNumber<10){
             processArgs(args);
-            System.out.println("Degree of parallelism: " + ForkJoinPool.getCommonPoolParallelism());
+            System.out.println("Degree of parallelism: " + ParSort.threads);
             Random random = new Random();
             int[] array = new int[size];
             System.out.println("the size of array is: "+array.length);
@@ -68,7 +68,8 @@ public class Main {
             }
 
             System.out.println();
-            size*=2;
+            //size*=2;
+            ParSort.threads *= 2;
             testNumber++;
         }
 
